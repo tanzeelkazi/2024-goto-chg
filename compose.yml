@@ -1,0 +1,11 @@
+services:
+  jupyter:
+    image: "tkazi/jupyter:2024-goto-chg"
+    # command: [ \
+    #   "start-notebook.py", \
+    #   "--PasswordIdentityProvider.hashed_password='${JUPYTER_HASHED_PASS}'" \
+    # ]
+    ports:
+      - 127.0.0.1:80:8888/tcp
+    volumes:
+      - "./work:/home/jovyan/work"
